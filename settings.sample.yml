@@ -1,0 +1,3 @@
+rails_sample_app:
+  app_root: <rails_sample_appのパス>
+  app_port: <rails_sample_app起動時のホスト側のポート>
