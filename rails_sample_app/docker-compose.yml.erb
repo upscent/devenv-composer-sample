@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.5
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  app:
+    build: .
+    links:
+      - db:rails_sample_app_database
+    volumes:
+      - <%= setting["app_root"] %>:/app
+    ports:
+      - <%= setting["app_port"] %>:3000
+    command: '/bin/bash -c "sh /replace_host.sh && bundle install --path vendor/bundler && bundle exec rails s -b 0.0.0.0"'

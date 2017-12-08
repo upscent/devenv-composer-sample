@@ -1,0 +1,6 @@
+rails_sample_app:
+  - name: db_host_replace
+    org: localhost
+    dest: rails_sample_app_database
+    files:
+      - config/database.yml
