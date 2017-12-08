@@ -80,7 +80,7 @@ default: &default
 
 ```sh
 $ cd <devenv-composer-sampleのパス>/rails_sample_app
-$ docker-compose up -d
+$ docker-compose up
 ・
 ・
 ・
@@ -93,7 +93,7 @@ app_1  | [2017-12-08 18:05:37] INFO  WEBrick::HTTPServer#start: pid=10 port=3000
 
 ```sh
 $ cd <devenv-composer-sampleのパス>/rails_sample_app
-$ dokcer-compose exec app bundle exec rake db:populate
+$ docker-compose exec app bundle exec rake db:populate
 ```
 
 これで開発環境の起動は完了です。
@@ -107,7 +107,7 @@ $ dokcer-compose exec app bundle exec rake db:populate
 前の手順でアプリケーションが正常に起動していれば、upscent/rails_sample_appリポジトリの `config/database.yml` のホスト名が `rails_sample_app_database` に変わっているはずです。
 
 ```sh
-$ cd <rails_sample_appのパス>
+$ cat <rails_sample_appのパス>/config/database.yml
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 default: &default
@@ -125,8 +125,9 @@ default: &default
 ```sh
 $ cd <rails_sample_appのパス>
 $ git add .
-% git status
+$ git status
 On branch master
+Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 ```
 
