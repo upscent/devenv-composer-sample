@@ -2,7 +2,8 @@
 
 # このサンプルコードでできること
 
-別リポジトリのRailsアプリケーション[upscent/rails_sample_app](https://github.com/upscent/rails_sample_app)を、Rails・MySQLが同じマシンに同居する構成からそれぞれ別マシンで起動する構成に変更し、開発環境で起動することができます。
+別リポジトリのRailsアプリケーション[upscent/rails_sample_app](https://github.com/upscent/rails_sample_app)を、Rails・MySQLが同じマシンに同居する構成からそれぞれ別マシンで起動する構成に変更し、開発環境で起動ができます。  
+また、構成変更の差分が `git add` されないことが確認できます。
 
 # 手順
 
@@ -129,4 +130,4 @@ On branch master
 nothing to commit, working directory clean
 ```
 
-
+たしかにホスト名の置換が `git add` できないことが確認できました。
